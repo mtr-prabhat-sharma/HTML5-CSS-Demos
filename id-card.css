@@ -1,0 +1,51 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.id-card {
+    background-color: lightgray;
+    width: 280px;
+    height: 380px;
+    padding: 10px;
+    border: 2px solid gray;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 25px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.header h2 {
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.info {
+    margin-top: 20px;
+    margin-left: 37px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+.barcode {
+    height: 20px;
+    width: 40px;
+}
+
