@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Layout</title>
+    </head>
+    <body>
+        <style>
+            main {
+                display: grid;
+                grid-template-areas: 
+                    "head head head"
+                    "side content content"
+                    "foot  foot foot";
+                grid-template-rows: 100% 100% 100%;
+                grid-template-columns:30% auto 30%;
+            }
+            header {grid-area: head; background-color: aqua;}
+            footer {grid-area: foot; background-color: blueviolet;}
+            article {grid-area: content; background-color: burlywood;}
+            aside {grid-area: side; background-color: yellow;}
+        </style>
+        <main>
+            <header>Header</header>
+            <article>Content</article>
+            <aside>Side Bar</aside>
+            <footer>Footer</footer>
+        </main>
+    </body>
+</html>

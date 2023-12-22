@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS - Positioning</title>
+    </head>
+    <body>
+        <style>
+            .rel {
+                position: relative;
+                top: 20%;
+                left: 20%;
+            }
+            .abs {
+                position: absolute;
+                top: 20%;
+                left: 20%;
+            }
+            .container > div {
+                width: 250px;
+                height: 100px;
+                background-color: aquamarine;
+            }
+            .container {
+                height: 300px;
+                width: 100%;
+                border: 2px solid blue;
+            }
+        </style>
+        <div class="container">Div 1</div>
+        <div class="container">
+          Div 2
+          <div class="rel">Relatively positioned</div>
+          <div class="abs"> Inside the Div 2 and Absolute Positioned</div>
+        </div>
+    </body>
+</html>
