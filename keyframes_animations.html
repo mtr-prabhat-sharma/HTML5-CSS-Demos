@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations</title>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <style>
+        :root{
+          height: 300px;
+          width: 300px;
+          font-size: 10px;
+          margin: 10px 10px 10px 10px;
+        }
+        div{
+          height: 200px;
+          width: 200px;
+          font-size: 3rem;
+          background-color: skyblue;
+          color: blue;
+          text-align: center;
+          margin: 15rem 15rem 15rem 15rem
+        }
+        
+        /* animation settings in .key-anim  */
+        .key-anim {
+            animation: colorchange 5s ease 1s 2 both alternate;
+            /* animation-name: colorchange;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-direction: both;
+            animation-fill-mode: backwards; */
+        }
+
+        /* define multiple target settings using @keyframes  */
+        @keyframes colorchange {
+            0% {background-color: maroon; }
+            25% {background-color: red;}
+            50% {background-color: green; border: 5px solid black;}
+            75% {background-color: orange;}
+            100% {background-color: yellow;}
+        }
+ 
+       
+      </style>
+ 
+      <!-- Markup here -->
+      <div class="key-anim">
+        1
+      </div>
+      <div>
+        2
+      </div>
+    </body>
+</html>

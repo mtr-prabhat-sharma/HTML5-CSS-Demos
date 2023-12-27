@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Facebook-like Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4267B2;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        header > img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            float: right;
+        }
+        footer {
+            background-color: #4267B2;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            height: 460px;
+        }
+        section > aside {
+            width: 300px;
+            background-color: orange;
+            padding-left: 10px;
+        }
+        section > article {
+            width: 100%;
+            border: 1px solid black;
+            box-shadow: 5px 5px 15px grey;
+        }
+        section > article > input {
+            width: 80%; 
+            margin-top: 50px; 
+            margin-left: 110px; 
+            height: 50px; 
+            
+        }
+        .aside-first {
+            background-color: grey;
+        }
+       
+        section > article > input:nth-child(2) {
+            background-color: white;
+            width: 80%; 
+            margin-top: 50px; 
+            margin-left: 110px; 
+            height: 250px; 
+            
+        }
+        /* Adding animations in profile image and input box */
+        .profile-img {
+            height: 170px;
+            width: 170px;
+            border-radius: 10px;
+            transition: width 2s, height 4s;
+        }
+        .profile-img:hover {
+            transition: scale(1.2);
+            width: 200px;
+            height: 200px;
+        }
+        .shake-on-hover {
+           transition: transform 0.3s ease;
+        }
+
+        .shake-on-hover:hover {
+           animation: shake 0.5s 10; 
+        }
+        
+        @keyframes colorchange {
+            0% {background-color: maroon; }
+            25% {background-color: red;}
+            50% {background-color: green; border: 5px solid black;}
+            75% {background-color: orange;}
+            100% {background-color: yellow;}
+        }
+        @keyframes shake { 
+            0%, 100% {
+            transform: translateX(0);
+        }
+        25%, 75% {
+            transform: translateX(-5px); 
+        }
+        50% {
+            transform: translateX(5px);
+        }
+    }
+
+  
+    </style>
+</head>
+<body>
+    <header>
+        Facebook
+        <button type="button" class="btn btn-primary position-relative">
+        Inbox
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+        </span>
+        </button>
+        <button type="button" class="position-relative">
+            <i class="bi bi-bell-fill"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+        </span>
+        </button>
+       
+        <i class="bi bi-bell-fill" style="float: right; margin-left: 15px;"></i>
+        <img src="man.jpg" alt="User Image">
+    </header>
+    <section>
+        <aside class="aside-first">
+            <img style="margin-top: 15px;" class="profile-img" src="man.jpg" alt="User Image">
+           <div style="display: flex;">
+            <figcaption style="color: wheat;">Prabhat Sharma</figcaption>
+            <img style="height: 20px; width: 20px; margin-left: 10px;" src="check.png" alt="User Image">
+           </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Photos</li>
+                    <li>Reviews</li>
+                    <li>Videos</li>
+                    <li>Events</li>
+                </ul>
+            </div>
+            <span class="btn rounded-pill bg-success">Success</span>
+        </aside>
+        <article>
+            <input class="shake-on-hover" type="text" placeholder="What's on your mind ..."/>
+            <input type="text" placeholder="Post from your friend ..."/>
+            
+        </article>
+        <aside>
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            <h4>Trending #1</h4>
+            <h4>Trending #2</h4>
+        </aside>
+    </section>
+    <footer>Facebook Copyright 2023</footer>
+</body>
+</html>

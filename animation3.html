@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations</title>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <style>
+        :root{
+          height: 300px;
+          width: 300px;
+          font-size: 10px;
+          margin: 10px 10px 10px 10px;
+        }
+        div{
+          height: 200px;
+          width: 200px;
+          font-size: 3rem;
+          background-color: skyblue;
+          color: blue;
+          text-align: center;
+          margin: 15rem 15rem 15rem 15rem
+        }
+        
+        /* Animation specific settings */
+        .anim {
+            transition: width 2s, height 4s, background-color 4s;
+        }
+
+        /* Target value and settings for animation */
+        .anim:hover {
+            height: 300px;
+            width: 150%;
+            background-color: orange;
+            opacity: 0.7;
+        }
+ 
+       
+      </style>
+ 
+      <!-- Markup here -->
+      <div class="anim">
+        1
+      </div>
+      <div>
+        2
+      </div>
+    </body>
+</html>

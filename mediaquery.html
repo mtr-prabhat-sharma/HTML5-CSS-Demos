@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Layout</title>
+    </head>
+    <body>
+        <style>
+           body {
+            background-color: yellowgreen;
+           }
+           @media only screen and (max-width: 600px) {
+            body {
+                background-color: aqua;
+            }
+            
+           }
+           @media only screen and (max-width: 400px) {
+            body {
+                background-color: skyblue;
+            }
+            div::after {
+                content: attr(data-message);
+            }
+            
+           }
+        </style>
+        <main>
+            <div 
+        </main>
+    </body>
+</html>
