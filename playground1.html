@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Flight With Bootstrap</title>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+    </head>
+    <body> 
+        <link rel="stylesheet" href="bootstrap.css">
+      <!-- Programming aspect inside script tag -->
+
+      <!-- By re-arranging the script tags, contexts can be shared -->
+      <script src="Playground.js"></script>
+   
+    
+
+<!-- Markup -->
+<div class="h2">Counter static & non-static</div>
+<strong>INCREASING COUNTER (Js Closures):</strong>
+<button class="btn btn-primary" onclick="handleClick1()">+</button>
+<span class="badge badge-success"></span>
+
+<strong>NON-CHANGING COUNTER (Js Currying of Functions):</strong>
+<button class="btn btn-danger" onclick="handleClick2()" >+</button>
+<span class="badge badge-danger"></span>
+
+<script>
+
+  function handleClick1(){
+        var result = closurefn5();
+        document.querySelectorAll('.badge')[0].innerHTML = "<b class='text-dark'>"+result+"</b>";
+    }
+
+    function handleClick2(){
+        var result = scopedCallbackfn4()();
+        //append the result with each click
+        document.querySelectorAll('.badge')[1].innerHTML +=  "<p><b class='text-dark'>"+result+"</b></p>";
+    }
+ function SimpleAccessDom(){
+    //accessing elements
+   var spans = document.querySelectorAll(".badge");   //if you have multiple matches
+   var span1 = spans[0];    //first span tag
+   var span2 = spans[1];    //second span tag
+
+   //Add some inner text
+   span1.innerHTML = "<span class='alert alert-warning'>A new html added</span>";
+   span2.innerHTML = "<span class='text-dark'>A simple text</span>";
+    }
+
+  
+
+    
+  </script>
+</body>
+</html>

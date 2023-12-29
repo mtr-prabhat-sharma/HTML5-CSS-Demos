@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+                <title>
+         Layout creating
+        </title>
+        <link rel="stylesheet" href="bootstrap.css">
+       
+        <style type="text/css">
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .body{
+            display: flex;
+            flex-direction: column;
+        }
+        #header{
+            display: flex;
+            width: 100%;
+            min-height: 80px;
+            background-color: navy;
+            padding-left: 60%;
+            padding-top: 1%;
+             /*text-align:center(text moves center)   line-height:30px(text moves vertically)*/
+              
+             margin-bottom: 5px; 
+        }
+        p{
+          height: 70px;
+          width: 70px;
+          font-size: 10px;
+          background-color: skyblue;
+          margin: 10px 10px 10px 10px;
+        }
+        .anim{
+        /*or transition: all 4s linear(liner,radus,ease)   */
+transition: width 4s, height 4s, backgrouund-color 4s,border 4s , box-shadow 4s;
+       }
+
+       /* target values or settings for animaion*/
+       .anim:hover{
+width: 150%;
+height: 500;
+background-color: orange;
+opacity: 0.6;
+border-style: solid;
+border-color: brown;
+box-shadow: 5px 5px 5px greenyellow;
+       }
+       .key-anim{
+    animation: colorchange 5s ease 1s 2 both alternate;
+   
+ }
+
+ /*define multiple target settings using @keyframes*/
+ @keyframes colorchange{
+    5%{background-color:red ;}
+    25%{background-color: black;}
+    55%{background-color: rgb(0, 255, 221);}
+    75%{background-color: blue;}
+    95%{background-color: green;}
+ }
+ .trans-2d:hover{
+                transform: scale(1.5,1.5) rotate(45deg) skew(30deg);
+                border-style: solid;
+                border-width: 2px;
+                border-radius: 4px;
+                opacity: 0.5;
+
+            }
+            .transform-3d:hover{
+                transform: rotate3d(2,2,-2,145deg) rotateX(-25deg) ;
+            }
+ 
+     
+        #main-div{
+       display: flex;
+       flex-direction: row; 
+       width: 100%;
+        min-height: 1000px;   
+           background-color: rgb(8, 236, 95);
+           margin-top: 5px;
+           float: left;
+
+
+     }
+     #sidebar-div{
+        width: 20%;
+           min-height: 550px;
+           background-color: aqua;
+           line-height: 50px; 
+           text-align:center;
+           float: left;
+     }
+     #middlebar-div{
+        width: 70%;
+           min-height: 550px;
+           background-color: grey;
+           float: initial;
+     }
+     #right-div{
+        width: 30%;
+           min-height: 550px;
+           background-color: rgb(0, 119, 255);
+           float: inline-end;
+     }
+     .clearfix::after{
+        content: "";
+        display: block;
+     }
+     
+     #footer{
+            width: 100%;
+            
+            min-height: 1%;
+            background-color: rgb(16, 219, 209);
+            padding-left: 20%;
+            text-align:center;
+             /*text-align:center(text moves center)   line-height:30px(text moves vertically)*/
+             line-height: 25px;  
+           
+             
+        }
+        .btn-primary{
+            box-shadow: inset;   
+            padding: 10px;
+                background-color: navy;
+                height: 40px;
+                width: 100px;
+                 
+                font-weight: bold;
+            }
+/* Optionally, you can apply additional styles here */
+.image-container {
+margin-bottom: 20px;
+text-align: center;
+}
+
+.image {
+width: 200px; /* Set the desired width */
+height: auto; /* Maintain aspect ratio */
+
+}
+
+.title {
+font-weight: bold;
+}
+
+.comment-section,
+.like-section {
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: rebeccapurple;
+}
+
+.comment-input {
+width: 10%;
+margin-right: 10px;
+align-items: center;
+}
+
+.submit-comment,
+.like-button {
+cursor: pointer;
+color: blue;
+}
+
+    </style>
+    </head>
+    <body>
+     
+       <h1 id="header">Facebook 
+        <img src="D:\emojis\usersymbol.webp" width="20px"height="30px">
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge bg-secondary">4</span>
+          </button>
+          <button type="button" class="btn btn-primary position-relative">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+       </h1>
+
+       
+       
+       <div id="main-div" class="clearfix"> 
+        <div id="sidebar-div">
+            <span class="badge bg-primary">Apps</span>
+            <span><ul>
+                <li><span class="badge bg-secondary">Secondary</span></li>
+                <li><span class="badge bg-success">photos</span></li>
+                <li><span class="badge bg-warning text-dark">Recent Photos</span></li>
+                <li><span class="badge bg-danger">Games</span></li>
+              </ul>  </span>
+              
+             
+        </div>
+        <div id="middlebar-div">Photos
+            <form>
+                <input type="text" placeholder="What's in your mind type anything">
+            </form>
+           
+                <h3>First image loding</h3>
+                <div class="spinner-border" role="status">
+                  
+                    <span class="visually-hidden">Loading...</span>
+                  </div> 
+                  
+                  <div id="images-container"></div>
+
+                   <script src="twoimagesfetch.js"></script>
+                </div>
+                                                    
+                  <div id="right-div"> post
+                    <button class="btn btn-primary" type="button" disabled data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                       
+             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+             Loading...
+              </button>
+              <br>
+              
+              <div id="t2d3d-div">
+                <h1>animaion's</h1>
+                <p class="trans-2d">hi</p>
+                <p class="transform-3d" >colors</p>
+                <p class="anim">hi</p>
+                </div>
+             
+     
+                  </div>
+                  
+                   </div>
+        
+       </div>
+       <h2 id="footer">@copiright 2023</h2>
+    </body>
+</html>

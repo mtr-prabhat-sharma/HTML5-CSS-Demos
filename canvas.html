@@ -1,0 +1,39 @@
+
+
+<button class="btn btn-primary" onclick="handleClick2()">Change Css class to button primary</button>
+<button class="btn btn-primary" onclick="handleClick3()">Change Css class to text- danger</button>
+<hr>
+
+
+<script>
+    (function draw() {
+        // draw
+        var ctrl = document.querySelector('#mycanvas');
+        var pen = ctrl.getContext("2d");
+        pen.moveTo(0,0);
+        pen.lineTo(100,100);
+        pen.stroke();
+
+        //draw text
+        pen.font = "50px Cursive";
+        pen.filterText("Lets Paint Magic", 0,200);
+
+        //draw image
+        var img = document.querySelector('img');
+        pen.drawImage(img,450,0);
+
+    })();
+
+    function haddleClick1() {
+        document.querySelector('div').className = 'alert alert-primary';
+    }
+
+    function handleClick2() {
+        document.querySelector('div').className = 'btn btn-warning';
+    }
+
+    function handleClick3() {
+        document.querySelector('div').className = 'text-danger p-3';
+    }
+
+</script>
